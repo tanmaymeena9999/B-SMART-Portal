@@ -1,0 +1,20 @@
+:root {
+    --primary-blue: #0b5fff;
+    --secondary-blue: #0a2d95;
+    --dark-text: #0f172a;
+    --light-text: #64748b;
+    --input-border: #cbd5e1;
+    --white: #ffffff;
+  
+    --bg-gradient: linear-gradient(
+      135deg,
+      #dff5ff 0%,
+      #e8fff8 100%
+    );
+  
+    --left-gradient: linear-gradient(
+      135deg,
+      #005f94 0%,
+      #012f4d 100%
+    );
+  }

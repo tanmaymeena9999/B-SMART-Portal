@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VIN Retention - B-SMART</title>
+        <link rel="stylesheet" href="../../shared/css/variables.css" />
+        <link rel="stylesheet" href="../../shared/css/common.css" />
+        <link rel="stylesheet" href="../retail-service-report/retail-service-report.css" />
+        <link rel="stylesheet" href="vin-retention.css" />
+    </head>
+    <body>
+        <main class="report-shell vin-shell">
+            <div id="appNavbar"></div>
+
+            <div class="workspace">
+                <div id="appSidebar"></div>
+
+                <section class="report-card vin-card" aria-label="VIN retention report">
+                    <div class="report-tabs vin-tabs">
+                        <div class="tab-left">
+                            <h1>Fill Report</h1>
+                            <span class="active-tab">VIN Retention</span>
+                        </div>
+                        <label class="excel-button" for="vinExcelUpload">
+                            <span aria-hidden="true">X</span>
+                            Upload Excel
+                        </label>
+                        <input class="file-upload-input" id="vinExcelUpload" type="file" accept=".xls,.xlsx" />
+                    </div>
+
+                    <div class="vin-content">
+                        <button class="data-toggle" type="button" id="vinDataToggle" aria-pressed="false">
+                            <span class="toggle-option toggle-retail">Retail Sales</span>
+                            <span class="toggle-option toggle-service">Service Data</span>
+                        </button>
+
+                        <div class="vin-table-frame">
+                            <table class="vin-table">
+                                <thead id="vinTableHead"></thead>
+                                <tbody id="vinTableBody"></tbody>
+                            </table>
+                        </div>
+
+                        <button class="add-row-button" id="addVinRowButton" type="button">
+                            ADD
+                            <span aria-hidden="true">+</span>
+                        </button>
+
+                        <div class="form-actions">
+                            <button class="draft-button" id="draftVinButton" type="button">Save as Draft</button>
+                            <button class="submit-button" id="submitVinButton" type="button">Submit</button>
+                            <button class="secondary-back" type="button" data-secondary-back-button>Back</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="vin-retention.js"></script>
+    </body>
+</html>

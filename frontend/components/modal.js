@@ -1,0 +1,2 @@
+// Modal component (placeholder)
+

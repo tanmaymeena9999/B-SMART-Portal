@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B-SMART Login</title>
+
+    <link rel="stylesheet" href="../../shared/css/variables.css">
+    <link rel="stylesheet" href="../../shared/css/common.css">
+    <link rel="stylesheet" href="./login.css">
+  </head>
+  <body>
+
+    <div class="login-container">
+
+      <div class="login-card">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-panel">
+
+          <div class="brand-logo" aria-label="Maruti Suzuki logo"></div>
+
+          <img
+            src="/images/login-hero.png"
+            alt="Dashboard Illustration"
+            class="hero-image">
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-panel">
+
+          <div class="powered-by-logo" aria-label="Powered by DE logo"></div>
+
+          <div class="form-container">
+
+            <h1>Get Started</h1>
+
+            <p class="subtitle">
+              Welcome to B - Smart – Let's get started
+            </p>
+
+            <form id="loginForm" novalidate>
+
+              <label for="email">Your email</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="hi@dummyid.in"
+                autocomplete="email"
+                required>
+
+              <label for="password">Enter password</label>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="............."
+                autocomplete="current-password"
+                required>
+
+              <p class="form-error" id="loginError" aria-live="polite"></p>
+
+              <button type="submit" class="login-btn">
+                Log In
+              </button>
+
+              <div class="or-text">
+                OR
+              </div>
+
+              <button type="button" class="maruti-btn" id="marutiLoginBtn">
+                Log With Maruti ID
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="./login.js" type="module"></script>
+
+  </body>
+</html>

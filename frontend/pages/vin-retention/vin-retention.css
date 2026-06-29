@@ -1,0 +1,230 @@
+.vin-card {
+  gap: 0;
+}
+
+.vin-tabs {
+  flex-wrap: wrap;
+}
+
+.vin-tabs .active-tab {
+  min-width: 160px;
+}
+
+.vin-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 18px 24px 24px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.data-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 4px;
+  width: 260px;
+  height: 40px;
+  margin-bottom: 18px;
+  padding: 4px;
+  color: #183a96;
+  background: #d9e7ff;
+  border-radius: 999px;
+  border: 1px solid #b8d0ef;
+  box-shadow: 0 6px 14px rgba(45, 88, 223, 0.12);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.toggle-option {
+  display: grid;
+  flex: 1 1 0;
+  place-items: center;
+  height: 32px;
+  border-radius: 999px;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.data-toggle[data-mode="retail"] .toggle-retail,
+.data-toggle[data-mode="service"] .toggle-service {
+  color: #ffffff;
+  background: linear-gradient(180deg, #2f5bf0 0%, #2148c9 100%);
+  box-shadow: 0 4px 10px rgba(33, 72, 201, 0.22);
+}
+
+.vin-table-frame {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+}
+
+.vin-table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  color: #4b5d79;
+  font-size: 13px;
+}
+
+.vin-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 56px;
+  padding: 8px 12px;
+  color: #ffffff;
+  background: #2d58df;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.vin-table tbody td {
+  height: 66px;
+  padding: 10px 12px;
+  border-right: 1px solid #d9e4f8;
+  border-bottom: 1px solid #eef4ff;
+  vertical-align: middle;
+}
+
+.vin-table tbody tr:nth-child(even) td {
+  background: #f8fbff;
+}
+
+.vin-table th:last-child,
+.vin-table td:last-child {
+  border-right: 0;
+}
+
+.vin-table th:nth-child(1),
+.vin-table td:nth-child(1) {
+  width: 76px;
+}
+
+.vin-table th:nth-child(2),
+.vin-table td:nth-child(2) {
+  width: 210px;
+}
+
+.vin-table th:nth-child(3),
+.vin-table td:nth-child(3) {
+  width: 220px;
+}
+
+.vin-table th:nth-child(4),
+.vin-table td:nth-child(4) {
+  width: 140px;
+  text-align: center;
+}
+
+.vin-table th:nth-child(5),
+.vin-table td:nth-child(5) {
+  width: 280px;
+}
+
+.vin-table.mode-service th:nth-child(6),
+.vin-table.mode-service td:nth-child(6) {
+  width: 120px;
+}
+
+.vin-input {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d0ddee;
+  border-radius: 10px;
+  background: #fbfdff;
+  color: #334155;
+  font: inherit;
+  font-size: 13px;
+}
+
+.vin-input[type="date"] {
+  min-width: 130px;
+}
+
+.add-row-button {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 92px;
+  height: 40px;
+  margin-top: 14px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #3f3f3f 0%, #111111 100%);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.add-row-button span {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  background: #2d58df;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.submit-button,
+.secondary-back,
+.draft-button {
+  min-width: 132px;
+  height: 42px;
+  padding: 0 18px;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.submit-button:disabled,
+.draft-button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.submit-button {
+  background: linear-gradient(180deg, #4a69ff 0%, #1737a7 100%);
+}
+
+.draft-button {
+  background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+}
+
+.secondary-back {
+  background: linear-gradient(180deg, #3e3e3e 0%, #0e0e0e 100%);
+}
+
+@media (max-width: 760px) {
+  .vin-content {
+    padding: 16px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .draft-button,
+  .secondary-back {
+    width: 100%;
+  }
+}

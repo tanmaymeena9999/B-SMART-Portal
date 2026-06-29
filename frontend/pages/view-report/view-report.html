@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>View Report - B-SMART</title>
+        <link rel="stylesheet" href="../../shared/css/variables.css" />
+        <link rel="stylesheet" href="../../shared/css/common.css" />
+        <link rel="stylesheet" href="../retail-service-report/retail-service-report.css" />
+        <link rel="stylesheet" href="view-report.css" />
+    </head>
+    <body>
+        <main class="report-shell view-shell">
+            <div id="appNavbar"></div>
+
+            <div class="workspace">
+                <div id="appSidebar"></div>
+
+                <section class="report-card view-card" aria-label="View report list">
+                    <div class="view-title">
+                        <h1>View Report</h1>
+                    </div>
+
+                    <div class="view-content">
+                        <div class="view-table-frame">
+                            <table class="view-table">
+                                <thead>
+                                    <tr>
+                                        <th>Sl No.</th>
+                                        <th>Dealer</th>
+                                        <th>Report Type</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportsTableBody">
+                                    <tr>
+                                        <td colspan="5">Loading reports...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="view-report.js"></script>
+    </body>
+</html>

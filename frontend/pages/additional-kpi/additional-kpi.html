@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Additional KPI - B-SMART</title>
+        <link rel="stylesheet" href="../../shared/css/variables.css" />
+        <link rel="stylesheet" href="../../shared/css/common.css" />
+        <link rel="stylesheet" href="../retail-service-report/retail-service-report.css" />
+        <link rel="stylesheet" href="additional-kpi.css" />
+    </head>
+    <body>
+        <main class="report-shell kpi-shell">
+            <div id="appNavbar"></div>
+
+            <div class="workspace">
+                <div id="appSidebar"></div>
+
+                <section class="report-card kpi-card" aria-label="Additional KPI report">
+                    <div class="report-tabs kpi-tabs">
+                        <div class="tab-left">
+                            <h1>Fill Report</h1>
+                            <span class="active-tab">Additional KPI report</span>
+                        </div>
+                        <label class="excel-button" for="additionalKpiExcelUpload">
+                            <span aria-hidden="true">X</span>
+                            Upload Excel
+                        </label>
+                        <input class="file-upload-input" id="additionalKpiExcelUpload" type="file" accept=".xls,.xlsx" />
+                    </div>
+
+                    <div class="table-frame kpi-table-frame">
+                        <table class="kpi-table">
+                            <thead id="kpiTableHead"></thead>
+                            <tbody id="kpiTableBody"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="upload-strip" aria-label="Supporting uploads">
+                        <div class="upload-item">
+                            <span>Camp Photograph</span>
+                            <label class="upload-button" for="campPhotographUpload">
+                                Upload <span aria-hidden="true">⬆</span>
+                            </label>
+                            <input
+                                class="file-upload-input"
+                                id="campPhotographUpload"
+                                type="file"
+                                accept="image/png"
+                                data-supporting-upload="campPhotograph" />
+                            <span class="upload-file-name" data-upload-file-name="campPhotograph">PNG required</span>
+                        </div>
+                        <span class="upload-divider"></span>
+                        <div class="upload-item">
+                            <span>SQS Training</span>
+                            <label class="upload-button" for="sqsTrainingUpload">
+                                Upload <span aria-hidden="true">⬆</span>
+                            </label>
+                            <input
+                                class="file-upload-input"
+                                id="sqsTrainingUpload"
+                                type="file"
+                                accept="image/png"
+                                data-supporting-upload="sqsTraining" />
+                            <span class="upload-file-name" data-upload-file-name="sqsTraining">PNG required</span>
+                        </div>
+                        <span class="upload-divider"></span>
+                        <div class="upload-item">
+                            <span>In house Training</span>
+                            <label class="upload-button" for="inHouseTrainingUpload">
+                                Upload <span aria-hidden="true">⬆</span>
+                            </label>
+                            <input
+                                class="file-upload-input"
+                                id="inHouseTrainingUpload"
+                                type="file"
+                                accept="image/png"
+                                data-supporting-upload="inHouseTraining" />
+                            <span class="upload-file-name" data-upload-file-name="inHouseTraining">PNG required</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-actions">
+                        <div class="action-buttons-row">
+                            <button class="draft-button" id="draftKpiButton" type="button">Save as Draft</button>
+                            <button class="submit-button" id="submitKpiButton" type="button">Submit</button>
+                            <button class="secondary-back" type="button" data-secondary-back-button>Back</button>
+                        </div>
+                        <label class="excel-button bottom-excel-button" for="additionalKpiExcelUpload">
+                            <span aria-hidden="true">X</span>
+                            Upload Excel
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="additional-kpi.js"></script>
+    </body>
+</html>

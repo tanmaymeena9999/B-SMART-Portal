@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard - B-SMART</title>
+        <link rel="stylesheet" href="../../shared/css/variables.css" />
+        <link rel="stylesheet" href="../../shared/css/common.css" />
+        <link rel="stylesheet" href="../retail-service-report/retail-service-report.css" />
+        <link rel="stylesheet" href="../view-report/view-report.css" />
+        <link rel="stylesheet" href="dashboard.css" />
+    </head>
+    <body>
+        <main class="report-shell view-shell dashboard-shell">
+            <div id="appNavbar"></div>
+
+            <div class="workspace">
+                <div id="appSidebar"></div>
+
+                <section class="report-card dashboard-card" aria-label="Dashboard">
+                    <div class="view-title">
+                        <h1>Dashboard</h1>
+                    </div>
+
+                    <div class="dashboard-content">
+                        <article class="metric-panel">
+                            <span>Total Reports</span>
+                            <strong>24</strong>
+                        </article>
+                        <article class="metric-panel">
+                            <span>Pending Review</span>
+                            <strong>06</strong>
+                        </article>
+                        <article class="metric-panel">
+                            <span>Submitted</span>
+                            <strong>18</strong>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="dashboard.js"></script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Retail Service Report - B-SMART</title>
+        <link rel="stylesheet" href="../../shared/css/variables.css" />
+        <link rel="stylesheet" href="../../shared/css/common.css" />
+        <link rel="stylesheet" href="retail-service-report.css" />
+    </head>
+    <body>
+        <main class="report-shell">
+            <div id="appNavbar"></div>
+
+            <div class="workspace">
+                <div id="appSidebar"></div>
+
+                <section class="report-card" aria-label="Retail service activity report">
+                    <div class="report-tabs">
+                        <div class="tab-left">
+                            <h1>Fill Report</h1>
+                            <span class="active-tab">Retail Service Activity Report</span>
+                        </div>
+                        <div class="report-header-actions">
+                            <button
+                                class="detail-toggle-button"
+                                id="toggleRetailDetails"
+                                type="button"
+                                aria-controls="retailReportDetails"
+                                aria-expanded="true">
+                                Minimize details
+                            </button>
+                            <label class="excel-button" for="retailExcelUpload">
+                                <span aria-hidden="true">X</span>
+                                Upload Excel
+                            </label>
+                        </div>
+                        <input class="file-upload-input" id="retailExcelUpload" type="file" accept=".xls,.xlsx" />
+                    </div>
+
+                    <form class="report-form" id="retailReportDetails">
+                        <label>
+                            <span>Distributor Code</span>
+                            <input id="distributorCode" type="text" disabled />
+                        </label>
+                        <label>
+                            <span>Distributor Name</span>
+                            <input id="distributorName" type="text" disabled />
+                        </label>
+                        <label class="conversion-rate-field">
+                            <span>Conversion Rate to USD</span>
+                            <div class="conversion-control">
+                                <input id="conversionRate" type="number" min="0" step="0.0001" placeholder="Live rate" readonly />
+                                <button id="applyConversionRate" type="button">Fetch Rate</button>
+                            </div>
+                        </label>
+                        <label>
+                            <span>Currency</span>
+                            <input id="currency" type="text" disabled />
+                        </label>
+                        <label>
+                            <span>FY</span>
+                            <input id="fiscalYear" type="text" disabled />
+                        </label>
+                        <label>
+                            <span>Name Of Country</span>
+                            <input id="countryName" type="text" />
+                        </label>
+                        <label>
+                            <span>Name Of CEO</span>
+                            <input id="ceoName" type="text" />
+                        </label>
+                        <label>
+                            <span>Name of General Manager, Service</span>
+                            <input id="generalManagerService" type="text" />
+                        </label>
+                    </form>
+
+                    <div class="table-frame">
+                        <table id="retailServiceTable">
+                            <thead id="retailTableHead"></thead>
+                            <tbody id="retailTableBody"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="retail-actions">
+                        <button class="secondary-action" id="copyLastMonthButton" type="button">Copy Last Month</button>
+                        <button class="draft-button" id="draftRetailReportButton" type="button">Save as Draft</button>
+                        <button class="submit-button" id="submitRetailReportButton" type="button">Submit</button>
+                        <button class="secondary-back" type="button" data-secondary-back-button>Back</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="retail-service-report.js"></script>
+    </body>
+</html>
